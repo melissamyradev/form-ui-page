@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top, #f4f4f4, #fff 20%, #fff 80%,#f4f4f4);
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  color: #143041;
+}
+
+body,
+form {
+  margin: 0 auto;
+}
+
+header {
+  background: #143041;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+header,
+section {
+  padding: 15px 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-size: 1.1em;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section {
+  border-bottom: 4px solid #143041;
+}
+
+section p,
+label,
+select {
+  font-size: .9em;
+}
+
+section p, footer {
+  color: #a6a4a4;
+  line-height: 1.35;
+}
+
+.container {
+  background: #fff;
+  padding: 0 25px;
+  margin: 73.56px auto 0;
+}
+
+/* ===================== FORM CONTENT ===================== */
+
+form {
+  text-align: left;
+  margin-top: 3px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.15em;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+label {
+  color: #1e3c4f;
+}
+
+label,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* ------- Fieldset Top Borders */
+.contact,
+.newsletter {
+  border-top: 2px solid #143041;
+  padding: 30px 0;
+}
+
+
+
+/* ------- Display Text Seperate Lines */
+label:not(.options-label) {
+  display: block;
+}
+
+
+
+/* ------- Input Style */
+.contact input,
+select,
+#other,
+input[type="submit"] {
+  background: #f0f0f0;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.contact input,
+label,
+select,
+.options,
+#other {
+  margin-bottom: 15px;
+}
+
+input::placeholder {
+  color: #a6a4a4;
+  font-size: .75em;
+  font-style: italic;
+  text-align: right;
+  padding-right: 20px;
+}
+
+input[type="submit"] {
+  background: #52bab3;
+  color: #fff;
+  font-size: 1.2em;
+  height: 60px;
+}
+
+
+
+/* ------- Select & Option Style */
+select {
+  color: #a6a4a4;
+  padding-left: 15px;
+  outline: none;
+}
+
+option[disabled] {
+  color: #a6a4a4;
+  display: none;
+}
+
+
+
+/* ------- Newsletter Label & Input Margins */
+label:not([for]),
+label[for="other"] {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.newsletter label:first-of-type {
+  margin-top: 0;
+}
+
+.options {
+  margin-right: 10px;
+}
+
+
+/* ------- Input Focus Style */
+input:not([type="submit"]):focus,
+select:focus,
+#other:focus {
+  outline: none;
+  background: #e6e6e6;
+  border: 2px solid #184969;
+  transition: .2s ease;
+}
+
+input:not([type="submit"]):focus,
+#other:focus {
+  padding: 10px;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  background: #008a8a;
+}
+
+/* ------- Overwrite */
+#zipcode,
+#other {
+  margin-bottom: 0;
+}
+
+#zipcode {
+  width: 50%;
+}
+
+#other {
+  height: 100px;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer {
+  font-size: .75em;
+  font-style: italic;
+  padding: 30px 0 50px;
+}
+
+
+/* ===================== MEDIA QUERIES ===================== */
+
+@media (min-width: 768px) {
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  form {
+    margin-top: 3px;
+  }
+
+  footer {
+    padding: 35px 0 50px;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 650px;
+  }
+
+  .contact,
+  .newsletter {
+    padding: 50px 0;
+  }
+
+  .contact label:not(.options-label) {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .contact input,
+  select {
+    width: 75%;
+  }
+
+  label[for="zipcode"] {
+    width: 25%;
+  }
+
+  #zipcode {
+    width: 25%;
+    margin-right: auto;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .newsletter {
+    padding-bottom: 30px;
+  }
+
+
+}
